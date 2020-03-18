@@ -1,0 +1,93 @@
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+header {
+  width: 100%;
+  height: 100vh;
+  max-width: 1920px;
+  min-width: $min-width;
+  text-align: left;
+  order: 1;
+  -webkit-order: 1;
+  background: url("../img/head-bg.png") center no-repeat;
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 200px 30px;
+  overflow: hidden;
+
+  .bottom-svg {
+    position: absolute;
+    bottom: -1px;
+    left: 1px;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .top-svg {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    height: 50vh;
+  }
+
+  h1 {
+    width: 450px;
+    font-size: 20px;
+    color: #fbfafa;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-family: "Myriad Pro Regular";
+    position: relative;
+    padding: 25px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 42px;
+      top: 0;
+      left: 0;
+      background: #fbfafa;
+    }
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  header {
+    .top-svg {
+      height: 30vh;
+    }
+    .bottom-svg {
+      height: 30vh;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    .top-svg {
+      height: 35vh;
+    }
+    .bottom-svg {
+      height: 35vh;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 145px 30px;
+    .top-svg {
+      height: 25vh;
+    }
+    .bottom-svg {
+      height: 25vh;
+    }
+  }
+}

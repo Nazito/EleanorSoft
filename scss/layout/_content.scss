@@ -1,0 +1,502 @@
+//main styles
+
+/* titles */
+p {
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.5;
+  font-family: "Dala Moa Light";
+}
+h1 {
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+}
+h2 {
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+  font-size: 58px;
+  font-family: "Dala Floda Regular";
+}
+h3 {
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+  font-family: "Dala Floda Regular";
+}
+li {
+  list-style-type: none;
+}
+/* text position */
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.nowrap {
+  white-space: nowrap !important;
+}
+
+/* loader */
+.loaded .main-wrapper {
+  opacity: 0;
+}
+.icon-load {
+  background: url(../img/loader.gif) no-repeat left top;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-left: -20px;
+  display: none;
+}
+.loaded .icon-load {
+  display: block;
+}
+
+/*
+================================================================================
+|                                     CONTENT                                 |
+================================================================================
+*/
+.content {
+  min-width: $min-width;
+  text-align: left;
+  width: 100%;
+  max-width: 1920px;
+  order: 2;
+  -webkit-order: 2;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  margin: 0 auto;
+}
+
+/*---------------------------------------*/
+/*SECTION brand-promise*/
+/*---------------------------------------*/
+
+.brand-promise {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.brand-promise_descr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 260px;
+
+  h2 {
+    padding-left: 100px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 110px;
+      width: 2px;
+      background-color: #101010;
+      @include rotate(35deg);
+      left: 70px;
+    }
+  }
+
+  .text-top {
+    margin-left: 160px;
+  }
+}
+.brand-promise_container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  font-size: 21px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  h3 {
+    text-transform: uppercase;
+    padding: 35px 0;
+  }
+  p {
+    padding: 0;
+  }
+}
+
+.container-img-outer {
+  width: max-content;
+  padding: 20px;
+  background-color: #f1f1e9;
+  max-width: 100%;
+}
+
+.text-top {
+  width: 550px;
+  font-family: "Futura Book";
+}
+
+.container-text {
+  width: 440px;
+}
+
+.brand-promise_container_item {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-of-type(1) {
+    .container-img-outer {
+      @include rotate(2deg);
+      .img-inner {
+        width: 530px;
+        height: 565px;
+        background: url("../img/item1-img.png") center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  &:nth-of-type(2) {
+    margin-top: 300px;
+    .container-img-outer {
+      @include rotate(-1deg);
+      .img-inner {
+        width: 720px;
+        height: 500px;
+        background: url("../img/item3-img.png") center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .container-text {
+      align-self: flex-end;
+    }
+  }
+
+  &:nth-of-type(3) {
+    flex-direction: row;
+    align-items: flex-end;
+    max-width: 1100px;
+    margin-top: -100px;
+    margin-left: -80px;
+
+    .container-img-outer {
+      @include rotate(-2deg);
+      .img-inner {
+        width: 500px;
+        height: 530px;
+        background: url("../img/item2-img.png") center no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .container-text {
+      margin-left: 90px;
+      margin-bottom: 110px;
+    }
+  }
+}
+
+/*---------------------------------------*/
+/*SECTION madeLA*/
+/*---------------------------------------*/
+
+.madeLA {
+  width: 100%;
+  height: 720px;
+  max-width: 1920px;
+  margin-top: 220px;
+  background: url("../img/madeLS.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h2 {
+    color: #fff;
+    padding: 0;
+  }
+
+  img {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    min-height: 100hv;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  h2 {
+    font-size: 45px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .brand-promise_container {
+    max-width: 95%;
+  }
+
+  .madeLA {
+    height: 600px;
+    margin-top: 160px;
+  }
+
+  .brand-promise_descr {
+    padding-left: 8%;
+  }
+
+  .brand-promise_container_item {
+    &:nth-of-type(1) {
+      .container-img-outer {
+        .img-inner {
+          width: 480px;
+          height: 510px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .container-img-outer {
+        .img-inner {
+          width: 650px;
+          height: 450px;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .container-img-outer {
+        .img-inner {
+          width: 450px;
+          height: 480px;
+        }
+      }
+    }
+  }
+
+  .brand-promise_descr h2::before {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .brand-promise_descr {
+    padding: 0;
+    justify-content: space-around;
+  }
+  .text-top {
+    width: 500px;
+  }
+  .brand-promise_container_item {
+    &:nth-of-type(1) {
+      .container-img-outer {
+        .img-inner {
+          width: 430px;
+          height: 460px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .container-img-outer {
+        .img-inner {
+          width: 585px;
+          height: 405px;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .container-img-outer {
+        .img-inner {
+          width: 405px;
+          height: 430px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .brand-promise_container {
+    flex-direction: column;
+  }
+
+  .container-text {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 30px;
+    align-self: center !important;
+  }
+
+  .brand-promise_container_item {
+    flex-direction: row;
+    max-width: 90%;
+    margin: 20px auto !important;
+    justify-content: space-around;
+  }
+
+  .brand-promise_descr {
+    justify-content: space-around;
+
+    .text-top {
+      margin: 0;
+    }
+  }
+
+  .brand-promise_container_item {
+    &:nth-of-type(1) {
+      .container-img-outer {
+        .img-inner {
+          width: 390px;
+          height: 410px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .container-img-outer {
+        .img-inner {
+          width: 525px;
+          height: 365px;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .container-img-outer {
+        .img-inner {
+          width: 365px;
+          height: 390px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .text-top {
+    width: 40%;
+    padding-left: 50px;
+  }
+  .madeLA {
+    height: 500px;
+  }
+  .madeLA img {
+    margin-top: 20px;
+    width: 80px;
+  }
+
+  .brand-promise_container_item {
+    &:nth-of-type(1) {
+      .container-img-outer {
+        .img-inner {
+          width: 350px;
+          height: 370px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .container-img-outer {
+        .img-inner {
+          width: 420px;
+          height: 300px;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .container-img-outer {
+        .img-inner {
+          width: 320px;
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  .brand-promise_descr {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-top {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .brand-promise_container_item {
+    flex-direction: column !important;
+    align-items: center !important;
+
+    .container-text {
+      margin: auto !important;
+    }
+  }
+  .madeLA {
+    height: 259px;
+    margin-top: 70px;
+    h2 {
+      font-size: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .brand-promise_descr h2 {
+    font-size: 30px;
+    padding-left: 30px;
+
+    &::before {
+      height: 80px;
+      left: 10px;
+    }
+  }
+
+  .brand-promise_container_item {
+    &:nth-of-type(1) {
+      .container-img-outer {
+        .img-inner {
+          width: 230px;
+          height: 240px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .container-img-outer {
+        .img-inner {
+          width: 220px;
+          height: 155px;
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .container-img-outer {
+        .img-inner {
+          width: 230px;
+          height: 240px;
+        }
+      }
+    }
+  }
+}
